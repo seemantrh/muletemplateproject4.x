@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<flow name="HTTP-muletemplateprojectFlow" doc:id="9893d67b-7184-4ce9-b703-438e3c672f82" >
+		<http:listener doc:name="Listener" doc:id="71a439ad-69ff-42c5-92e5-b86e54ac6d20" config-ref="RMSInbound_HTTP_Listener_config" path="${uri}"/>
+		<set-variable value='#[uuid() replace "-" with ""]' doc:name="messageID" doc:id="d0113c6c-257b-4c2a-9def-bdd24fccac52" variableName="messageID"/>
+		<logger level="INFO" doc:name="Logger" doc:id="0d88fcb1-7d12-44b9-961d-badeeaecdbf6" message="messageID: #[vars.messageID] Request Received : Payload : #[payload]"/>
+	</flow>
+</mule>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+	
+	<configuration-properties
+		doc:name="Configuration properties"
+		doc:id="f185e789-60a5-4eb5-9791-7b63d3a0ba7b"
+		file="config-${MULE_ENV}.yaml" />
+	<configuration-properties
+		doc:name="Configuration properties"
+		doc:id="3e541c17-c74e-4527-b3c0-4f4b0a5526d4" file="config.yaml" />
+	
+	<http:listener-config
+		name="RMSInbound_HTTP_Listener_config"
+		doc:name="RMS Inbound HTTP Listener config"
+		doc:id="847eaffa-79f1-48ca-ac4d-8637473cac5b" basePath="${basePath}">
+		<http:listener-connection host="${host}"
+			port="${port}" />
+	</http:listener-config>
+	<global-property doc:name="Global Property" doc:id="15e04eca-8696-44f2-96b5-7e0a8755b39a" name="MULE_ENV" value="qa" />
+	
+</mule>
