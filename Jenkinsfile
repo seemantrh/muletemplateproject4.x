@@ -1,16 +1,7 @@
 pipeline {
 agent any
 
-environment {
-        ANYPOINT = credentials('ANYPOINT_PLATFORM_CREDENTIALS')
-        MULE_SETTINGS = '/opt/maven/settings/np-settings.xml'
-        MVN = 'mvn'
-        GIT = 'git'
-        ANYPOINT_CREDENTIALS_USR=ssrivastavarh	
-        ANYPOINT_CREDENTIALS_PSW=Miraya@123
-        
-}
-    
+
     
 tools {
   maven 'Maven-3.5.2'
@@ -29,7 +20,7 @@ tools {
     stage('Deploy ARM') {
      
       steps {
-        sh 'mvn deploy -P arm -Darm.target.name=local-4.2.1-ee -Danypoint.username=${ANYPOINT_CREDENTIALS_USR} -Danypoint.password=${ANYPOINT_CREDENTIALS_PSW}'
+        sh 'mvn deploy -P arm -Darm.target.name=local-4.2.1-ee -Danypoint.username=ssrivastavarh -Danypoint.password=Miraya@123'
       }
     } 
     stage('Deploy CloudHub') {
@@ -38,7 +29,7 @@ tools {
       }
       
       steps {
-        sh 'mvn deploy -P cloudhub -Dmule.version=4.2.1 -Danypoint.username=${ANYPOINT_CREDENTIALS_USR} -Danypoint.password=${ANYPOINT_CREDENTIALS_PSW}'
+        sh 'mvn deploy -P cloudhub -Dmule.version=4.2.1 -Danypoint.username=ssrivastavarh -Danypoint.password=Miraya@123'
       }
     }
   }
