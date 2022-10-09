@@ -29,7 +29,7 @@ tools {
     stage('Deploy ARM') {
      
       steps {
-        sh 'mvn deploy -P arm -Darm.target.name=local-3.9.0-ee -Danypoint.username=${ANYPOINT_CREDENTIALS_USR} -Danypoint.password=${ANYPOINT_CREDENTIALS_PSW}'
+        sh 'mvn deploy -P arm -Darm.target.name=local-4.2.1-ee -Danypoint.username=${ANYPOINT_CREDENTIALS_USR} -Danypoint.password=${ANYPOINT_CREDENTIALS_PSW}'
       }
     } 
     stage('Deploy CloudHub') {
@@ -38,7 +38,7 @@ tools {
       }
       
       steps {
-        sh 'mvn deploy -P cloudhub -Dmule.version=3.9.0 -Danypoint.username=${ANYPOINT_CREDENTIALS_USR} -Danypoint.password=${ANYPOINT_CREDENTIALS_PSW}'
+        sh 'mvn deploy -P cloudhub -Dmule.version=4.2.1 -Danypoint.username=${ANYPOINT_CREDENTIALS_USR} -Danypoint.password=${ANYPOINT_CREDENTIALS_PSW}'
       }
     }
   }
