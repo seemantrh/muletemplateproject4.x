@@ -1,18 +1,12 @@
 pipeline {
-agent any
-
-
-    
-tools {
-  maven 'Maven-3.8.5'
-}
+  agent any
   stages {
-    stage('Unit Test') {
+    stage('Unit Test') { 
       steps {
         sh 'mvn clean test'
       }
-    }  
-    stage('Deploy Standalone') {
+    }
+    stage('Deploy Standalone') { 
       steps {
         sh 'mvn deploy -P standalone'
       }
