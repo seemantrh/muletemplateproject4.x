@@ -3,8 +3,8 @@ agent any
    
 
    tools { 
-        maven 'Maven 3.8.5' 
-        jdk 'jdk1.8.0_321' 
+        maven 'maven 3.8.5' 
+        jdk '1.8.0_321' 
     }
 
 
