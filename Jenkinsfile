@@ -15,9 +15,9 @@ stage('Deploy ARM') {
         ANYPOINT_CREDENTIALS = credentials('anypoint.credentials') 
       }
       steps {
-        
 
-echo deploying to ARM
+
+	echo deploying to ARM
 	local TOKEN_BODY=$(curl --tlsv1.2 -X POST  https://anypoint.mulesoft.com/accounts/login -H 'Content-Type: application/json' -d '{"username": "rhintegrations","password": "RHintegrations@1"}'   )
 	echo $TOKEN_BODY
 	local ACCESS_TOKEN=`echo $TOKEN_BODY | /usr/local/bin/jq -r '.access_token'`
@@ -32,7 +32,6 @@ echo deploying to ARM
 
 	echo $MMC_RESULT
 
- 
       }
     }
     
