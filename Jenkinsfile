@@ -10,20 +10,8 @@ agent any
 
   stages {
 
-   stage ('Initialize') {
-            steps {
-                sh '''
-                    echo "PATH = ${PATH}"
-                    echo "M2_HOME = ${M2_HOME}"
-                ''' 
-            }
-        }
 
-    stage('Unit Test') {
-      steps {
-        sh 'mvn clean test'
-      }
-    }  
+ 
     stage('Deploy Standalone') {
       steps {
         sh 'mvn deploy -P standalone'
