@@ -15,7 +15,7 @@ stage('Deploy ARM') {
         ANYPOINT_CREDENTIALS = credentials('anypoint.credentials') 
       }
       steps {
-        sh 'mvn deploy -P arm -Darm.target.name=dev1-421-default -Danypoint.username=${ANYPOINT_CREDENTIALS_USR}  -Danypoint.password=${ANYPOINT_CREDENTIALS_PSW}' 
+        sh 'mvn deploy -P arm -Darm.target.id=2410794 -Danypoint.username=${ANYPOINT_CREDENTIALS_USR}  -Danypoint.password=${ANYPOINT_CREDENTIALS_PSW}' 
       }
     }
     
