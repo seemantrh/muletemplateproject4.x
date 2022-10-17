@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.rh.mule4</groupId>
@@ -11,23 +9,23 @@
 
 	<name>muletemplateproject4</name>
 
-	<parent>
-		<groupId>com.rh</groupId>
+<parent>
+		<groupId>com.rh.mule4</groupId>
 		<artifactId>serviceparent4</artifactId>
-		<version>1.0.4</version>
+		<version>1.0.7</version>
 	</parent>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-<mule.maven.plugin.version>3.5.2</mule.maven.plugin.version>
+		<mule.maven.plugin.version>3.5.2</mule.maven.plugin.version>
 		<mule.version>4.3.0</mule.version>
-     <anypoint.username>seemantrh</anypoint.username>
-    <anypoint.password>Mirya@123</anypoint.password>
-    <anypoint.uri>https://anypoint.mulesoft.com</anypoint.uri>
-    <arm.target.name>mule-default4.3-dev3</arm.target.name>
-    <!-- One of: server, serverGroup, cluster -->
-    <arm.target.type>server</arm.target.type>
-    <arm.environment>QA-Default</arm.environment>
+		<anypoint.username>seemantrh</anypoint.username>
+		<anypoint.password>Mirya@123</anypoint.password>
+		<anypoint.uri>https://anypoint.mulesoft.com</anypoint.uri>
+		<arm.target.name>mule-default4.3-dev3</arm.target.name>
+		<!-- One of: server, serverGroup, cluster -->
+		<arm.target.type>server</arm.target.type>
+		<arm.environment>QA-Default</arm.environment>
 	</properties>
 
 	<build>
@@ -65,11 +63,17 @@
 			<version>1.2.2</version>
 			<classifier>mule-plugin</classifier>
 		</dependency>
+		<dependency>
+			<groupId>com.rh.mule4</groupId>
+			<artifactId>MuleDevelopmentSettings4</artifactId>
+			<version>1.0.15</version>
+			<classifier>mule-plugin</classifier>
+		</dependency>
 	</dependencies>
 
-  <profiles>
+	<profiles>
 
-<profile>
+		<profile>
 			<id>arm</id>
 			<build>
 				<plugins>
@@ -102,7 +106,7 @@
 				</plugins>
 			</build>
 		</profile>
-  </profiles>
+	</profiles>
 
 
 </project>
