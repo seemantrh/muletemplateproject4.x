@@ -86,7 +86,6 @@
 								<target>${arm.target.name}</target>
 								<!-- One of: server, serverGroup, cluster -->
 								<targetType>${arm.target.type}</targetType>
-								<environment>${arm.environment}</environment>
 							</armDeployment>
 						</configuration>
 						<executions>
