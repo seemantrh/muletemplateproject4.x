@@ -19,7 +19,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-<mule.maven.plugin.version>3.8.5</mule.maven.plugin.version>
+<mule.maven.plugin.version>3.5.2</mule.maven.plugin.version>
 		<mule.version>4.3.0</mule.version>
      <anypoint.username>seemantrh</anypoint.username>
     <anypoint.password>Mirya@123</anypoint.password>
